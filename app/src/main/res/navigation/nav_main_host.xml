@@ -1,0 +1,50 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_main_host"
+    app:startDestination="@id/fragmentMoviesList">
+    <fragment
+        android:id="@+id/fragmentMoviesList"
+        android:name="com.example.movieappmvvmdaggerhilt.ui.fragmnt.MovieListFragment"
+        android:label="MovieListFragment" >
+        <action
+            android:id="@+id/action_fragmentMoviesList_to_fragmentMovieDetail"
+            app:destination="@id/fragmentMovieDetail"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_fragmentMoviesList_to_findMovieListFragment"
+            app:destination="@id/findMovieListFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentMovieDetail"
+        android:name="com.example.movieappmvvmdaggerhilt.ui.fragmnt.MovieDetailFragment"
+        android:label="DetailMovieFragment" >
+
+        <argument
+            android:name="movie_id"
+            app:argType="integer"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/findMovieListFragment"
+        android:name="com.example.movieappmvvmdaggerhilt.ui.fragmnt.FindMovieListFragment"
+        android:label="FindMovieListFragment" >
+        <action
+            android:id="@+id/action_findMovieListFragment_to_fragmentMovieDetail"
+            app:destination="@id/fragmentMovieDetail"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+</navigation>
