@@ -10,7 +10,7 @@ class Const {
         val DATABASE_NAME = "practiceApp"
 
 
-        val API_KEY =  "5c48454aeadd184da70aa52ff8741ca7"
+        val API_KEY =  "YOUR_API_KEY"
         val API_URL = "https://api.themoviedb.org/3/"
         val BASE_API_URL = "https://image.tmdb.org/t/p/w92/"
         const val FIRTS_PAGE = 1
